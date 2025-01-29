@@ -1,0 +1,21 @@
+<div id="content" class="prose">
+  <slot />
+</div>
+
+<script>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme") ?? "light";
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.getElementById("content")?.classList.remove("prose-invert");
+  } else {
+    document.getElementById("content")?.classList.add("prose-invert");
+  }
+</script>

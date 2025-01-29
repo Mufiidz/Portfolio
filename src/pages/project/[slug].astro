@@ -1,0 +1,37 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("project");
+
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntry("project", slug);
+
+const { Content } = await entry.render();
+const { title, description } = entry.data;
+---
+
+<Layout>
+  <div class="flex items-center">
+    <div class="px-40 w-screen">
+      <h1 class="text-5xl font-semibold py-5">
+        {title}
+      </h1>
+      <p>
+        {description}
+      </p>
+      <div class="flex justify-center items-center">
+        <Prose>
+          <Content />
+        </Prose>
+      </div>
+    </div>
+  </div>
+</Layout>

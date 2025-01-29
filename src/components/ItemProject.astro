@@ -1,0 +1,32 @@
+---
+import Divider from "./Divider.astro";
+
+interface Props {
+  project: {
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+  };
+}
+
+const project = Astro.props.project;
+---
+
+<a href="/">
+  <div class="flex flex-col justify-between">
+    <img src={project.image} alt="Logo">
+    <h2 class="text-2xl font-semibold">{project.title}</h2>
+    <p>{project.description}</p>
+    <div class="flex gap-2">
+      {
+        project.tags.map((tag) => (
+          <div class="text-white font-normal py-2 px-4 rounded-full transition duration-300 border-white">
+            {tag}
+          </div>
+        ))
+      }
+    </div>
+    <Divider />
+  </div>
+</a>

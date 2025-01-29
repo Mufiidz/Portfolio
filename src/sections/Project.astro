@@ -1,0 +1,25 @@
+---
+import Section from "../layouts/Section.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("project");
+---
+
+<Section title="project">
+  <div class="lg:w-screen py-32">
+    <div class="px-40 flex items-center">
+      <div class="w-full">
+        <h1 class="text-5xl font-semibold py-5 text-center">Projects</h1>
+        <div class="flex flex-wrap justify-center gap-4 pt-5">
+          {
+            projects.map((project) => (
+              <div class="hover:underline font-medium text-3xl px-3 py-2">
+                <a href={`/project/${project.slug}`}>{project.data.title}</a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

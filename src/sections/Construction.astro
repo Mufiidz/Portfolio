@@ -1,0 +1,35 @@
+---
+import Section from "../layouts/Section.astro";
+---
+
+<Section title="construction">
+  <div class="w-screen h-[calc(100vh-250px)] flex items-center">
+    <div class="w-full flex flex-col justify-center items-center">
+      <h1 class="text-8xl py-5 font-extrabold">Coming Soon.</h1>
+      <div>
+        This page is under construction. Redirecting...<span id="countdown">(3)</span>
+      </div>
+    </div>
+  </div>
+</Section>
+
+<script>
+  let timeLeft = 3;
+  const countdownElement = document.getElementById('countdown');
+
+  if (countdownElement === null) {
+    throw new Error('Countdown element not found');
+  }
+
+  const countdownInterval = setInterval(() => {
+    timeLeft--;
+    countdownElement.textContent = `(${timeLeft})`;
+    
+
+    if (timeLeft <= 0) {
+      clearInterval(countdownInterval);
+      countdownElement.textContent = '';
+    }
+  }, 1000);
+</script>
+

@@ -1,0 +1,30 @@
+---
+import Logo from "../components/Logo.astro";
+import Section from "../layouts/Section.astro";
+---
+
+<Section title="home">
+  <div class="lg:w-screen h-[calc(100vh-64px)] flex">
+    <div class="justify-between px-32 lg:px-40 py-8 flex-col-reverse lg:flex-row items-center flex">
+      <div class="w-full">
+        <h1 class="text-4xl lg:text-5xl font-bold lg:text-start text-center">Hi, I'm Rifqi Mufidianto.</h1>
+        <p class="pt-5 lg:text-start text-center">
+          A software engineer (web) who has watched so many movies that it's
+          become an obsession—almost to the point of getting sick of them! 😂
+          Learn more about me and let's get to know each other!
+        </p>
+        <div class="pt-5 flex justify-center lg:justify-start">
+          <a
+            href="/cv"
+            class="bg-blue-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-600 hover:shadow-xl transition duration-300"
+          >
+            Lihat CV
+          </a>
+        </div>
+      </div>
+      <div class="w-full h-full lg:h-min justify-center flex items-center">
+        <Logo class="lg:h-1/2 w-1/2" />
+      </div>
+    </div>
+  </div>
+</Section>
