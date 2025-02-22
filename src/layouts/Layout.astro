@@ -2,20 +2,19 @@
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/Navbar.astro";
 import background from "../assets/background.png";
-
-const redirectUrl = 'https://mufiidz.github.io/';
-const delay = 3;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <meta http-equiv="refresh" content={`${delay}; url=${redirectUrl}`}/>
-    <title>Rifqi Mufidianto Portofolio</title>
+    <meta name="description" content="Rifqi Mufidianto Web Portofolio.">
+    <meta name="keywords" content="Rifqi, Mufidianto, Mufiidz, Mufidz, Arctix Melody">
+    <meta name="author" content="Rifqi Mufidianto">
+    <title>Rifqi Mufidianto</title>
   </head>
   <NavBar />
   <body class="w-screen h-screen">
@@ -26,6 +25,7 @@ const delay = 3;
           src={background.src}
           alt="background"
           fetchpriority="high"
+          loading="lazy"
         />
         <div>
           <slot />
