@@ -10,8 +10,21 @@ const currentPath = Astro.url.pathname;
   >
     <h1 class="text-9xl font-extrabold">404</h1>
     <p class="pt-5 text-base">Page Not Found ({currentPath})</p>
-    <a href="/">
-      <div class="pt-10 text-blue-500">Back to home.</div>
-    </a>
+    <button
+      back-home
+      class="mt-10 shadow-lg rounded-full py-2 px-8 bg-blue-400 text-white font-semibold cursor-pointer"
+      type="button"
+    >
+      Back to Home.
+    </button>
   </div>
 </Layout>
+
+<script>
+  const buttons = document.querySelectorAll("button[back-home]");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      window.location.replace("/");
+    });
+  });
+</script>
