@@ -5,9 +5,26 @@
   },
   {
     "title": "ChatAja",
-    "url": "https://mufiidz.github.io/ChatAja/"
+    "repository_url": "https://github.com/Mufiidz/ChatAja"
   },
   {
-    "title": "ChatAja"
+    "title": "Dstory",
+    "repository_url": "https://github.com/Mufiidz/dstory"
+  },
+  {
+    "title": "Portfolio",
+    "repository_url": "https://github.com/Mufiidz/Portfolio"
+  },
+  {
+    "title": "War9a",
+    "repository_url": "https://github.com/Softyan/WAR9A"
+  },
+  {
+    "title": "Montra",
+    "repository_url": "https://github.com/Mufiidz/Montra"
+  },
+  {
+    "title": "mufiidz.github.io",
+    "url": "https://mufiidz.github.io/"
   }
 ]
