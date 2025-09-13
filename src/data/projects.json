@@ -1,5 +1,13 @@
 [
   {
+    "title": "AsianWiki App",
+    "repository_url": "https://github.com/Mufiidz/AsianWikiApp"
+  },
+  {
+    "title": "AsianWiki API",
+    "repository_url": "https://github.com/Mufiidz/AsianWikiAPI"
+  },
+  {
     "title": "Pokedex",
     "repository_url": "https://github.com/Mufiidz/pokedex"
   },
